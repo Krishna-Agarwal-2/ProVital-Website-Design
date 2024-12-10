@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provital Health & Wellness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="file.png" alt="Provital Logo" class="logo">
+            <h1 class="navbar-title">Provital</h1>
+            <ul class="navbar-links">
+                <li><a href="#portfolio">List your practice</a></li>
+                <li><a href="#about">For Employers</a></li>
+                <li><a href="#contact">Courses</a></li>
+                <li><a href="#faq">Books</a></li>
+                <li><a href="#blog">Speakers</a></li>
+                <li><a href="#blog">Doctors</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Sign Up / Login</a>
+                    <div class="dropdown-content">
+                        <div>
+                          <span>Doctor:</span>
+                          <a href="#login">Login</a>
+                          <a href="#signup">Sign Up</a>
+                        </div>
+                        <div>
+                          <span>Patients:</span>
+                          <a href="#login">Login</a>
+                          <a href="#signup">Sign Up</a>
+                        </div>
+                      </div>
+                      
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- Picture Grid and Book Appointment Section -->
+    <div class="carousel-container">
+        <div class="diagonal-line"></div>
+        <!-- First Carousel -->
+        <div class="logos">
+            <div class="logos-slide">
+                <img src="left1.jpeg">
+                <img src="left2.jpeg">
+                <img src="left3.jpeg">
+                <img src="left4.jpeg">
+                <!-- Clone for seamless loop -->
+                <img src="left1.jpeg">
+                <img src="left2.jpeg">
+                <img src="left3.jpeg">
+                <img src="left4.jpeg">
+            </div>
+        </div>
+    
+        <!-- Second Carousel -->
+        <div class="logos right-carousel">
+            <div class="logos-slide reverse">
+                <img src="right1.jpeg">
+                <img src="right2.jpeg">
+                <img src="right3.jpeg">
+                <!-- Clone for seamless loop -->
+                <img src="right1.jpeg">
+                <img src="right2.jpeg">
+                <img src="right3.jpeg">\
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text">
+        <h2>
+            Book an appointment with 
+            <span style="color: #1caff9">lifestyle medicine</span>
+            experts
+        </h2>
+        <p>Optimize your lifestyle and reverse chronic deseases</p>
+    </div>
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" placeholder="Condition, procedure, specialty...">
+        <input type="text" placeholder="City, state, or zipcode">
+        <input type="text" placeholder="Insurance carrier">
+        <button>Find now</button>
+    </div>
+    <div class="diagonal">
+    </div>
+
+    <!-- Health & Wellness Section -->
+    <!-- Health & Wellness Section -->
+    <section id="portfolio" class="health-wellness">
+    <p class="section-heading">HOW IT WORKS</p  >
+    <P class="pillars"><span style="color: #e55b00"><i>Lifestyle as medicine:</i></span>
+    The six pillars.</P>
+
+    
+    <!-- Buttons for navigation -->
+    <div class="card-navigation">
+        <button onclick="scrollToCard(0)">Nutrition</button>
+        <button onclick="scrollToCard(1)">Physical Activity</button>
+        <button onclick="scrollToCard(2)">Restorative Sleep</button>
+        <button onclick="scrollToCard(3)">Stress Management</button>
+        <button onclick="scrollToCard(4)">Social Connection</button>
+        <button onclick="scrollToCard(5)">Substance Abuse</button>
+    </div>
+
+    <div class="scroll-container">
+        <!-- Card 1 -->
+        <div class="portfolio-card">
+            <img src="try.jpg" alt="Nutrition" class="portfolio-image">
+            <div class="portfolio-content">
+                <h4 class="portfolio-title">Nutrition</h4>
+                <p class="portfolio-text">Evidence supports the use of whole-food, plant-predominant diets to prevent, treat, and reverse chronic diseases.</p>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="portfolio-card">
+            <img src="try2.jpg" alt="Physical Activity" class="portfolio-image">
+            <div class="portfolio-content">
+                <h4 class="portfolio-title">Physical Activity</h4>
+                <p class="portfolio-text">Regular physical activity helps manage weight and reduces the risk of chronic disease.</p>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="portfolio-card">
+            <img src="try3.jpg" alt="Restorative Sleep" class="portfolio-image">
+            <div class="portfolio-content">
+                <h4 class="portfolio-title">Restorative Sleep</h4>
+                <p class="portfolio-text">Consistent, quality sleep is essential for cognitive function and physical health.</p>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="portfolio-card">
+            <img src="try4.jpg" alt="Stress Management" class="portfolio-image">
+            <div class="portfolio-content">
+                <h4 class="portfolio-title">Stress Management</h4>
+                <p class="portfolio-text">Effective stress management techniques are crucial for mental well-being and overall health.</p>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="portfolio-card">
+            <img src="try5.jpg" alt="Social Connection" class="portfolio-image">
+            <div class="portfolio-content">
+                <h4 class="portfolio-title">Social Connection</h4>
+                <p class="portfolio-text">Strong social connections are associated with lower risk of chronic diseases and enhanced mental health.</p>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="portfolio-card">
+            <img src="try6.jpg" alt="Substance Abuse" class="portfolio-image">
+            <div class="portfolio-content">
+                <h4 class="portfolio-title">Substance Abuse</h4>
+                <p class="portfolio-text">Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script>
+        function scrollToCard(cardIndex, event) {
+            const scrollContainer = document.querySelector('.scroll-container');
+            const cardWidth = scrollContainer.children[0].offsetWidth + 16; // Includes margin
+            scrollContainer.scrollTo({
+                left: cardWidth * cardIndex,
+                behavior: 'smooth',
+            });
+
+            // Prevent page scroll
+            event.preventDefault();
+        }
+    </script>
+
+</body>
+
+</html>
